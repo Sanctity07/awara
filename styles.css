@@ -10,11 +10,11 @@
   --serif: 'Playfair Display', Georgia, serif;
   --sans:  'DM Sans', system-ui, sans-serif;
 
-  --gap: clamp(5rem, 12vw, 10rem);
+  --gap: clamp(4rem, 10vw, 9rem);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 18px; }
+html { scroll-behavior: smooth; }
 body {
   background: var(--cream);
   color: var(--ink);
@@ -45,7 +45,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.4rem clamp(1.5rem, 5vw, 3.5rem);
+  padding: 1.25rem clamp(1.25rem, 5vw, 3rem);
   background: rgba(245,240,232,0.88);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
@@ -53,17 +53,17 @@ nav {
 .nav-logo {
   font-family: var(--serif);
   font-weight: 900;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   letter-spacing: -.02em;
   color: var(--purple);
 }
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 1.75rem;
   list-style: none;
 }
 .nav-links a {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -78,8 +78,8 @@ nav {
 
 
 section {
-  padding: var(--gap) clamp(1.5rem, 8vw, 6rem);
-  max-width: 1200px;
+  padding: var(--gap) clamp(1.25rem, 7vw, 5rem);
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -99,7 +99,7 @@ section {
 
 .label {
   display: inline-block;
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   font-weight: 500;
   letter-spacing: .14em;
   text-transform: uppercase;
@@ -123,8 +123,8 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-top: 8rem;
-  padding-bottom: clamp(3.5rem, 9vw, 7rem);
+  padding-top: 7rem;
+  padding-bottom: clamp(3rem, 8vw, 6rem);
   position: relative;
   overflow: hidden;
 }
@@ -147,7 +147,7 @@ section {
 .hero-inner { position: relative; z-index: 1; }
 
 .hero-pre {
-  font-size: 0.82rem;
+  font-size: 0.72rem;
   letter-spacing: .18em;
   text-transform: uppercase;
   color: var(--muted);
@@ -157,7 +157,7 @@ section {
 h1.hero-title {
   font-family: var(--serif);
   font-weight: 900;
-  font-size: clamp(4.5rem, 13vw, 10.5rem);
+  font-size: clamp(3.8rem, 12vw, 9.5rem);
   line-height: .95;
   letter-spacing: -.03em;
   color: var(--ink);
@@ -172,26 +172,26 @@ h1.hero-title em {
 .hero-tagline {
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(1.2rem, 2.8vw, 1.75rem);
+  font-size: clamp(1.05rem, 2.5vw, 1.5rem);
   color: var(--muted);
-  margin: 1.75rem 0 2.75rem;
-  max-width: 520px;
+  margin: 1.5rem 0 2.5rem;
+  max-width: 480px;
 }
 
 .hero-hook {
-  max-width: 660px;
-  font-size: clamp(1rem, 1.8vw, 1.2rem);
-  line-height: 1.85;
+  max-width: 600px;
+  font-size: clamp(.92rem, 1.6vw, 1.05rem);
+  line-height: 1.75;
   color: #333;
   border-left: 3px solid var(--purple);
-  padding-left: 1.5rem;
-  margin-bottom: 3.5rem;
+  padding-left: 1.25rem;
+  margin-bottom: 3rem;
 }
 
 .hero-cta-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.1rem;
+  gap: 1rem;
   align-items: center;
 }
 
@@ -203,10 +203,10 @@ h1.hero-title em {
   color: var(--cream);
   font-family: var(--sans);
   font-weight: 500;
-  font-size: .95rem;
+  font-size: .85rem;
   letter-spacing: .06em;
   text-transform: uppercase;
-  padding: 1rem 2rem;
+  padding: .85rem 1.75rem;
   border: 2px solid var(--purple);
   cursor: pointer;
   transition: background .2s, color .2s;
@@ -223,10 +223,10 @@ h1.hero-title em {
   color: var(--ink);
   font-family: var(--sans);
   font-weight: 500;
-  font-size: .95rem;
+  font-size: .85rem;
   letter-spacing: .06em;
   text-transform: uppercase;
-  padding: 1rem 2rem;
+  padding: .85rem 1.75rem;
   border: 2px solid var(--ink);
   cursor: pointer;
   transition: background .2s, color .2s;
@@ -240,19 +240,19 @@ h1.hero-title em {
 .scroll-cue {
   position: absolute;
   bottom: 2rem;
-  right: clamp(1.5rem, 5vw, 3.5rem);
+  right: clamp(1.25rem, 5vw, 3rem);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: .4rem;
-  font-size: .72rem;
+  font-size: .65rem;
   letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--muted);
 }
 .scroll-cue-line {
   width: 1px;
-  height: 56px;
+  height: 50px;
   background: var(--muted);
   animation: scrollDrop 1.8s ease-in-out infinite;
 }
@@ -269,20 +269,20 @@ h1.hero-title em {
   background: var(--ink);
   color: var(--cream);
   max-width: 100%;
-  padding: var(--gap) clamp(1.5rem, 8vw, 6rem);
+  padding: var(--gap) clamp(1.25rem, 7vw, 5rem);
 }
 #problem .inner {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 #problem .label { color: var(--purple2); border-color: var(--purple2); }
 #problem h2 {
   font-family: var(--serif);
   font-weight: 900;
-  font-size: clamp(2.6rem, 8vw, 6rem);
+  font-size: clamp(2.2rem, 7vw, 5.5rem);
   line-height: 1.05;
   letter-spacing: -.03em;
-  margin-bottom: 2.75rem;
+  margin-bottom: 2.5rem;
 }
 #problem h2 em {
   font-style: italic;
@@ -292,8 +292,8 @@ h1.hero-title em {
 .problem-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
-  margin-top: 3.5rem;
+  gap: 2rem;
+  margin-top: 3rem;
 }
 @media (min-width: 720px) {
   .problem-grid { grid-template-columns: 1fr 1fr; }
@@ -301,46 +301,46 @@ h1.hero-title em {
 
 .problem-item {
   border-top: 1px solid rgba(255,255,255,.15);
-  padding-top: 1.75rem;
+  padding-top: 1.5rem;
 }
 .problem-num {
   font-family: var(--serif);
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 900;
   color: rgba(90,31,160,.4);
   line-height: 1;
-  margin-bottom: .6rem;
+  margin-bottom: .5rem;
 }
 .problem-item p {
-  font-size: 1.05rem;
-  line-height: 1.8;
+  font-size: .95rem;
+  line-height: 1.7;
   color: rgba(245,240,232,.75);
 }
 .problem-item strong {
   display: block;
   font-family: var(--serif);
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: var(--cream);
-  margin-bottom: .5rem;
+  margin-bottom: .4rem;
 }
 
 .problem-quote {
-  margin-top: 4.5rem;
+  margin-top: 4rem;
   border-left: 3px solid var(--purple2);
-  padding-left: 1.75rem;
+  padding-left: 1.5rem;
 }
 .problem-quote blockquote {
   font-family: var(--serif);
   font-style: italic;
-  font-size: clamp(1.25rem, 2.8vw, 1.8rem);
+  font-size: clamp(1.15rem, 2.5vw, 1.6rem);
   line-height: 1.55;
   color: rgba(245,240,232,.9);
 }
 .problem-quote cite {
   display: block;
-  margin-top: .85rem;
-  font-size: .82rem;
+  margin-top: .75rem;
+  font-size: .75rem;
   letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--muted);
@@ -352,17 +352,17 @@ h1.hero-title em {
 #pillars h2 {
   font-family: var(--serif);
   font-weight: 900;
-  font-size: clamp(2.6rem, 8vw, 5.5rem);
+  font-size: clamp(2.2rem, 7vw, 5rem);
   line-height: 1.05;
   letter-spacing: -.03em;
-  margin-bottom: 1.1rem;
-  max-width: 760px;
+  margin-bottom: 1rem;
+  max-width: 700px;
 }
 #pillars .intro {
-  max-width: 600px;
-  font-size: 1.05rem;
+  max-width: 560px;
+  font-size: .97rem;
   color: var(--muted);
-  margin-bottom: 4.5rem;
+  margin-bottom: 4rem;
 }
 
 .pillars-list {
@@ -376,40 +376,40 @@ h1.hero-title em {
 
 .pillar {
   border-top: 2px solid var(--ink);
-  padding: 2.25rem 1.75rem 2.75rem 0;
+  padding: 2rem 1.5rem 2.5rem 0;
   position: relative;
 }
 @media (min-width: 720px) {
-  .pillar:not(:last-child) { border-right: 1px solid var(--line); padding-right: 2.25rem; margin-right: 2.25rem; }
+  .pillar:not(:last-child) { border-right: 1px solid var(--line); padding-right: 2rem; margin-right: 2rem; }
 }
 
 .pillar-icon {
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   border: 1.5px solid var(--purple);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 }
-.pillar-icon svg { width: 22px; height: 22px; stroke: var(--purple); fill: none; stroke-width: 1.5; }
+.pillar-icon svg { width: 20px; height: 20px; stroke: var(--purple); fill: none; stroke-width: 1.5; }
 
 .pillar h3 {
   font-family: var(--serif);
   font-weight: 700;
-  font-size: 1.7rem;
-  margin-bottom: .85rem;
+  font-size: 1.5rem;
+  margin-bottom: .75rem;
   letter-spacing: -.01em;
 }
 .pillar p {
-  font-size: 1rem;
-  line-height: 1.85;
+  font-size: .92rem;
+  line-height: 1.75;
   color: #444;
 }
 .pillar-tag {
   display: inline-block;
-  margin-top: 1.4rem;
-  font-size: .75rem;
+  margin-top: 1.25rem;
+  font-size: .68rem;
   letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--purple);
@@ -422,14 +422,14 @@ h1.hero-title em {
   background: var(--purple);
   color: var(--cream);
   max-width: 100%;
-  padding: var(--gap) clamp(1.5rem, 8vw, 6rem);
+  padding: var(--gap) clamp(1.25rem, 7vw, 5rem);
 }
 #book .inner {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3.5rem;
+  gap: 3rem;
   align-items: center;
 }
 @media (min-width: 760px) {
@@ -441,10 +441,10 @@ h1.hero-title em {
 #book h2 {
   font-family: var(--serif);
   font-weight: 900;
-  font-size: clamp(2.6rem, 7vw, 5rem);
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
   line-height: 1;
   letter-spacing: -.03em;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.25rem;
 }
 #book h2 em {
   display: block;
@@ -456,8 +456,8 @@ h1.hero-title em {
 }
 
 #book p {
-  font-size: 1.05rem;
-  line-height: 1.85;
+  font-size: .97rem;
+  line-height: 1.75;
   color: rgba(245,240,232,.8);
   margin-bottom: 1.1rem;
 }
@@ -470,12 +470,12 @@ h1.hero-title em {
   color: var(--purple);
   font-family: var(--sans);
   font-weight: 500;
-  font-size: .95rem;
+  font-size: .85rem;
   letter-spacing: .08em;
   text-transform: uppercase;
-  padding: 1rem 2.25rem;
+  padding: .9rem 2rem;
   border: 2px solid var(--cream);
-  margin-top: 1.75rem;
+  margin-top: 1.5rem;
   transition: background .2s, color .2s;
 }
 .btn-book:hover {
@@ -490,7 +490,7 @@ h1.hero-title em {
   justify-content: center;
 }
 .book-img {
-  width: min(340px, 85vw);
+  width: min(280px, 80vw);
   box-shadow: 16px 20px 70px rgba(0,0,0,.5), -4px -4px 0 rgba(245,240,232,.08);
   transform: rotate(-2deg);
   transition: transform .4s;
@@ -502,11 +502,11 @@ h1.hero-title em {
 #about h2 {
   font-family: var(--serif);
   font-weight: 900;
-  font-size: clamp(2.4rem, 7vw, 5rem);
+  font-size: clamp(2rem, 6vw, 4.5rem);
   line-height: 1.05;
   letter-spacing: -.03em;
-  margin-bottom: 2.25rem;
-  max-width: 740px;
+  margin-bottom: 2rem;
+  max-width: 680px;
 }
 #about h2 em {
   font-style: italic;
@@ -516,16 +516,16 @@ h1.hero-title em {
 .about-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3.5rem;
+  gap: 3rem;
 }
 @media (min-width: 720px) {
-  .about-grid { grid-template-columns: 1fr 2fr; gap: 5.5rem; align-items: start; }
+  .about-grid { grid-template-columns: 1fr 2fr; gap: 5rem; align-items: start; }
 }
 
 .about-portrait { position: relative; }
 .about-portrait-frame {
   width: 100%;
-  max-width: 280px;
+  max-width: 260px;
   aspect-ratio: 3/4;
   background: var(--line);
   position: relative;
@@ -545,7 +545,7 @@ h1.hero-title em {
   justify-content: center;
   font-family: var(--serif);
   font-weight: 900;
-  font-size: 6.5rem;
+  font-size: 6rem;
   color: rgba(59,14,110,.18);
   letter-spacing: -.04em;
 }
@@ -556,17 +556,17 @@ h1.hero-title em {
   right: -1rem;
   background: var(--purple);
   color: var(--cream);
-  font-size: .72rem;
+  font-size: .65rem;
   letter-spacing: .12em;
   text-transform: uppercase;
-  padding: .55rem 1.1rem;
+  padding: .5rem 1rem;
 }
 
 .about-body p {
-  font-size: 1.05rem;
-  line-height: 1.9;
+  font-size: .97rem;
+  line-height: 1.8;
   color: #333;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.25rem;
 }
 .about-body p:last-child { margin-bottom: 0; }
 .about-body strong { color: var(--ink); font-weight: 500; }
@@ -577,11 +577,11 @@ h1.hero-title em {
   background: var(--ink);
   color: var(--cream);
   max-width: 100%;
-  padding: var(--gap) clamp(1.5rem, 8vw, 6rem);
+  padding: var(--gap) clamp(1.25rem, 7vw, 5rem);
   text-align: center;
 }
 #join .inner {
-  max-width: 680px;
+  max-width: 640px;
   margin: 0 auto;
 }
 #join .label { color: rgba(245,240,232,.45); border-color: rgba(245,240,232,.25); }
@@ -589,33 +589,33 @@ h1.hero-title em {
 #join h2 {
   font-family: var(--serif);
   font-weight: 900;
-  font-size: clamp(2.6rem, 8vw, 5.5rem);
+  font-size: clamp(2.2rem, 7vw, 5rem);
   line-height: 1.05;
   letter-spacing: -.03em;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1rem;
 }
 #join p {
-  font-size: 1.05rem;
-  line-height: 1.85;
+  font-size: .97rem;
+  line-height: 1.75;
   color: rgba(245,240,232,.65);
-  margin-bottom: 2.75rem;
+  margin-bottom: 2.5rem;
 }
 
 .signup-form {
   display: flex;
   flex-direction: column;
-  gap: .85rem;
-  max-width: 480px;
+  gap: .75rem;
+  max-width: 440px;
   margin: 0 auto;
 }
 .signup-form input[type="email"] {
   width: 100%;
-  padding: 1.1rem 1.4rem;
+  padding: 1rem 1.25rem;
   background: rgba(255,255,255,.07);
   border: 1px solid rgba(255,255,255,.2);
   color: var(--cream);
   font-family: var(--sans);
-  font-size: 1rem;
+  font-size: .95rem;
   outline: none;
   transition: border .2s;
 }
@@ -624,13 +624,13 @@ h1.hero-title em {
 
 .btn-signup {
   width: 100%;
-  padding: 1.1rem;
+  padding: 1rem;
   background: var(--purple);
   color: var(--cream);
   border: 2px solid var(--purple);
   font-family: var(--sans);
   font-weight: 500;
-  font-size: .95rem;
+  font-size: .85rem;
   letter-spacing: .08em;
   text-transform: uppercase;
   cursor: pointer;
@@ -639,8 +639,8 @@ h1.hero-title em {
 .btn-signup:hover { background: transparent; color: var(--cream); border-color: var(--purple2); }
 
 .signup-note {
-  margin-top: .85rem;
-  font-size: .8rem;
+  margin-top: .75rem;
+  font-size: .72rem;
   letter-spacing: .05em;
   color: rgba(245,240,232,.35);
 }
@@ -650,7 +650,7 @@ h1.hero-title em {
 footer {
   background: var(--ink);
   border-top: 1px solid rgba(255,255,255,.08);
-  padding: 2.25rem clamp(1.5rem, 8vw, 6rem);
+  padding: 2rem clamp(1.25rem, 7vw, 5rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -660,12 +660,12 @@ footer {
 .footer-logo {
   font-family: var(--serif);
   font-weight: 900;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: var(--cream);
   letter-spacing: -.02em;
 }
 .footer-right {
-  font-size: .8rem;
+  font-size: .72rem;
   letter-spacing: .06em;
   color: rgba(245,240,232,.3);
   text-transform: uppercase;
